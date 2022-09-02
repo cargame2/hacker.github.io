@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    margin: 100px auto; 
+    height: 330px;
+    width: 580px;
+    background: rgba(112, 10, 207, 0.5);
+    border: 2px solid rgba(37, 246, 184, 0.5);
+    border-radius: 20px;
+}
+img{
+    height:277px ;
+    width: 500px;
+    border: 2px solid rgba(37, 246, 184, 0.5);
+    border-radius: 20px;
+}
+#image{
+  position: relative;
+  top: 30px;
+  left: 35px;
+}
+
+
