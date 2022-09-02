@@ -1,0 +1,45 @@
+<div id="clockDisplay" class="clockStyle"></div>
+<style>
+    #clockDisplay {
+        border: 2px solid black;
+        font-family: "Roboto", sans-serif;
+        font-size: 60px;
+        text-align: center;
+        margin: 0px auto;
+        background-color: #ffffff;
+        padding: 0px;
+        height: 100px;
+        color: #000000;
+        padding-top: 20px;
+        letter-spacing: 2px;
+    }
+</style>
+<script>
+     function renderTime(){
+        var currentTime=new Date();
+        var diem="AM";
+        var h=currentTime.getHours();
+        var m=currentTime.getMinutes();
+        var s=currentTime.getSeconds();
+        if(h==0){
+            h=12;
+        }
+        else if(h > 12){
+            h=h - 12;
+            diem="PM"
+        }
+        if(h < 10){
+            h="0" + h;
+        }
+        if(m < 10){
+            m="0" + m;
+        }
+        if(s < 10){
+            s="0" + s;
+        }
+        var myClock=document.getElementById('clockDisplay');
+        myClock.textContent=h + ":" + m + ":" + s + " " + diem;
+        setTimeout('renderTime()', 1000);
+    }
+    renderTime();
+</script>
